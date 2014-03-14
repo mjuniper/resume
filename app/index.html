@@ -4,97 +4,257 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>resume</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <!-- build:css(.tmp) styles/main.css -->
-        <link rel="stylesheet" href="styles/main.css">
-        <!-- endbuild -->
-        <!-- build:js scripts/vendor/modernizr.js -->
-        <script src="bower_components/modernizr/modernizr.js"></script>
-        <!-- endbuild -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>mike juniper :: resume</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="software developer resume">
+      <meta name="author" content="mike juniper">
+
+      <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" >
+
+      <style type="text/css">
+        body {
+          padding-top: 60px;
+          padding-bottom: 40px;
+        }
+        .hero-unit {
+          padding: 30px;
+          margin-bottom: 15px;
+        }
+
+        @media print {
+          * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+          a[href]:after { content: " (" attr(href) ")"; }
+          a[href^="#"]:after { content: ""; }  /* Don't show internal links */
+
+          .btn-navbar {
+            display: none !important;
+          }
+
+          #desc h1:after {
+            content: url(https://chart.googleapis.com/chart?cht=qr&chs=75x75&chl=http://mikejuniper.com/resume&choe=UTF-8);
+            float:right;
+          }
+
+          #print-email {
+            float: right;
+            margin-top: 10px;
+          }
+
+          .hero-unit {
+            border: solid 1px #eee !important;
+          }
+
+          .span4 {
+            width: 30% !important;
+            float: left !important;
+            margin-left: 3% !important;
+          }
+
+          h2 {
+            font-size: 24px !important;
+            margin: 5px 0 !important;
+          }
+
+          dl {
+            margin: 0; !important;
+          }
+
+          footer { page-break-inside: avoid; }
+          p, h2, h3 { orphans: 3; widows: 3; }
+          h2, h3 { page-break-after: avoid; }
+        }
+      </style>
+<!--       <link href="../wp-content/uploads/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet"> -->
+
+      <script src="bower_components/modernizr/modernizr.js"></script>
     </head>
     <body>
-        <!--[if lt IE 10]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Mike Juniper</a>
+          <span id="print-email" class="visible-print">mjuniper@gmail.com</span>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="#about" data-toggle="modal" data-target="#about">About</a></li>
+            <li><a href="mailto:mike@mikejuniper.com">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
 
+      <div class="container">
 
-        <div class="container">
-            <div class="header">
-                <ul class="nav nav-pills pull-right">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-                <h3 class="text-muted">resume</h3>
-            </div>
-
-            <div class="jumbotron">
-                <h1>'Allo, 'Allo!</h1>
-                <p class="lead">Always a pleasure scaffolding your apps.</p>
-                <p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p>
-            </div>
-
-            <div class="row marketing">
-                <div class="col-lg-6">
-                    <h4>HTML5 Boilerplate</h4>
-                    <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
-
-                    <h4>Bootstrap</h4>
-                    <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
-
-                    <h4>Modernizr</h4>
-                    <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
-
-
-
-                </div>
-            </div>
-
-            <div class="footer">
-                <p>♥ from the Yeoman team</p>
-            </div>
+        <!-- Main hero unit for a primary marketing message or call to action -->
+        <div id="desc" class="jumbotron">
 
         </div>
 
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-sm-4">
+            <h2><i class="glyphicon glyphicon-pencil"></i> Languages</h2>
+            <ul id="langs"></ul>
+          </div>
+          <div class="col-sm-4">
+            <h2><i class="glyphicon glyphicon-book"></i> Libraries</h2>
+            <ul id="libss"></ul>
+         </div>
+          <div class="col-sm-4">
+            <h2><i class="glyphicon glyphicon-wrench"></i> Tools</h2>
+            <ul id="tools"></ul>
+          </div>
+        </div>
 
-        <!-- build:js scripts/vendor.js -->
-        <!-- bower:js -->
-        <script src="bower_components/jquery/jquery.js"></script>
-        <!-- endbower -->
-        <!-- endbuild -->
+        <hr>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
+      <h2><i class="glyphicon glyphicon-ok"></i> Experience</h2>
+      <dl id="experience"></dl>
 
-        <!-- build:js scripts/main.js -->
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
+      <hr>
 
-        <!-- build:js scripts/plugins.js -->
-        <script src="bower_components/sass-bootstrap/js/affix.js"></script>
-        <script src="bower_components/sass-bootstrap/js/alert.js"></script>
-        <script src="bower_components/sass-bootstrap/js/dropdown.js"></script>
-        <script src="bower_components/sass-bootstrap/js/tooltip.js"></script>
-        <script src="bower_components/sass-bootstrap/js/modal.js"></script>
-        <script src="bower_components/sass-bootstrap/js/transition.js"></script>
-        <script src="bower_components/sass-bootstrap/js/button.js"></script>
-        <script src="bower_components/sass-bootstrap/js/popover.js"></script>
-        <script src="bower_components/sass-bootstrap/js/carousel.js"></script>
-        <script src="bower_components/sass-bootstrap/js/scrollspy.js"></script>
-        <script src="bower_components/sass-bootstrap/js/collapse.js"></script>
-        <script src="bower_components/sass-bootstrap/js/tab.js"></script>
-        <!-- endbuild -->
-</body>
+      <h2><i class="glyphicon glyphicon-ok"></i> Notable Projects</h2>
+      <dl id="projects"></dl>
+
+      <hr>
+
+      <h2><i class="glyphicon glyphicon-ok"></i> Education</h2>
+      <ul id="education" class="unstyled"></ul>
+
+      <hr>
+
+      <h2><i class="glyphicon glyphicon-ok"></i> Presentations</h2>
+      <ul id="presentations" class="unstyled"></ul>
+
+      <hr>
+
+      <footer class="alert alert-info">
+      <p>I thought it would be clever to create my resume as a <a href="scripts/resume.js" target="_blank">javascript object</a>. Then I started thinking that it would be cool to put some <a href="http://jsfiddle.net/mjuniper/tHrM4/embedded/result/" target="_blank">unit tests</a> on it to validate it. The tests are kind of token but they end up being another way to present the data. Then I started thinking that people might not think it was all that clever and would rather see a nicely formatted resume. So (since I've always said that any web developer who's worth anything should have an HTML resume) I built this page which uses <a href="http://twitter.github.io/bootstrap/index.html" target="_blank">Twitter Bootstrap</a> for the layout and generates the content from the Javascript object using <a href="http://icanhazjs.com/" target="_blank">ICanHaz</a>/<a href="http://mustache.github.io/" target="_blank">Mustache</a> templates. I thought about using Backbone.js for this but that seemed like overkill.</p>
+  <p>Don't worry, there's a print stylesheet so you should be able to print it, or print it to a pdf.</p>
+      See the <a href="http://jsfiddle.net/mjuniper/tHrM4/embedded/result/">tests</a>.
+      </footer>
+
+      </div> <!-- /container -->
+
+    <div id="about" class="modal fade" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+            <h3 id="aboutModalLabel">About</h3>
+          </div>
+          <div class="modal-body">
+            <p>I thought it would be clever to create my resume as a <a href="http://www.mikejuniper.com/wp-content/uploads/resume.js" target="_blank">javascript object</a>. Then I started thinking that it would be cool to put some <a href="http://jsfiddle.net/mjuniper/tHrM4/embedded/result/" target="_blank">unit tests</a> on it to validate it. The tests are kind of token but they end up being another way to present the data. Then I started thinking that people might not think it was all that clever and would rather see a nicely formatted resume. So (since I've always said that any web developer who's worth anything should have an HTML resume) I built this page which uses <a href="http://twitter.github.io/bootstrap/index.html" target="_blank">Twitter Bootstrap</a> for the layout and generates the content from the Javascript object using <a href="http://icanhazjs.com/" target="_blank">ICanHaz</a>/<a href="http://mustache.github.io/" target="_blank">Mustache</a> templates. I thought about using Backbone.js for this but that seemed like overkill.</p>
+            <p>Don't worry, there's a print stylesheet so you should be able to print it, or print it to a pdf.</p>
+            <p><small class="muted">Icons courtesy of <a href="http://fortawesome.github.com/Font-Awesome" target="_blank">Font Awesome</a> by Dave Gandy.</small></p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/icanhaz/ICanHaz.min.js"></script>
+    <script src="bower_components/momentjs/moment.js"></script>
+    <script src="scripts/resume.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        // (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        // function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        // e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        // e.src='//www.google-analytics.com/analytics.js';
+        // r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        // ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+    <script id="descTemplate" type="text/html">
+      <h1>{{name}}</h1>
+      <p class="lead">{{description}}</p>
+    </script>
+
+    <script id="langsTemplate" type="text/html">
+      {{#languages}}
+        <li>{{.}}</li>
+      {{/languages}}
+    </script>
+
+    <script id="libsTemplate" type="text/html">
+      {{#libraries}}
+        <li>{{.}}</li>
+      {{/libraries}}
+    </script>
+
+    <script id="toolsTemplate" type="text/html">
+      {{#tools}}
+        <li>{{.}}</li>
+      {{/tools}}
+    </script>
+
+    <script id="experienceTemplate" type="text/html">
+      {{#experience}}
+        <dt>{{title}} - {{organization}}, <small class="muted">{{location}}, {{#formatDate}}{{begDate}}{{/formatDate}}&nbsp;- {{#formatDate}}{{endDate}}{{/formatDate}}</small></dt>
+        <dd>{{description}}</dd>
+      {{/experience}}
+    </script>
+
+    <script id="projectsTemplate" type="text/html">
+      {{#projects}}
+        <dt>{{#url}}<a href="{{url}}">{{/url}}{{title}}{{#url}}</a>{{/url}}&nbsp;- {{client}}</dt>
+        <dd>{{description}}</dd>
+      {{/projects}}
+    </script>
+
+    <script id="educationTemplate" type="text/html">
+      {{#education}}
+        <li><h5>{{title}} - {{institution}}, <small class="muted">{{location}}, {{#formatDate}}{{date}}{{/formatDate}}</small></h5></li>
+      {{/education}}
+    </script>
+
+    <script id="presentationsTemplate" type="text/html">
+      {{#presentations}}
+        <li><h5>{{title}} - <small class="muted">{{year}} {{event}}</small></h5></li>
+      {{/presentations}}
+    </script>
+
+      <script>
+      $(function() {
+        resume.formatDate = function () {
+          return function(rawDate, renderFunc) {
+            var m = moment(renderFunc(rawDate));
+            var today = moment().subtract('hours', 1);
+            if (m.isAfter(today)) {
+              return 'Present';
+            } else {
+              return m.format('MMMM YYYY');
+            }
+          }
+        };
+        $('#desc').append(ich.descTemplate(resume));
+        $('#langs').append(ich.langsTemplate(resume.skills));
+        $('#libss').append(ich.libsTemplate(resume.skills));
+        $('#tools').append(ich.toolsTemplate(resume.skills));
+        $('#experience').append(ich.experienceTemplate(resume));
+        $('#projects').append(ich.projectsTemplate(resume));
+        $('#education').append(ich.educationTemplate(resume));
+        $('#presentations').append(ich.presentationsTemplate(resume));
+      });
+    </script>
+
+  </body>
 </html>
