@@ -267,6 +267,13 @@ module.exports = function (grunt) {
                 src: '{,*/}*.css'
             }
         },
+        ,
+        'gh-pages': {
+          options: {
+            base: 'dist'
+          },
+          src: '**/*'
+        },
         modernizr: {
             devFile: '<%= yeoman.app %>/bower_components/modernizr/modernizr.js',
             outputFile: '<%= yeoman.dist %>/bower_components/modernizr/modernizr.js',
@@ -335,5 +342,11 @@ module.exports = function (grunt) {
         'jshint',
         'test',
         'build'
+    ]);
+
+    grunt.loadNpmTasks('grunt-gh-pages');
+    grunt.registerTask('deploy', [
+      'build',
+      'gh-pages'
     ]);
 };

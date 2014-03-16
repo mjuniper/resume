@@ -11,8 +11,9 @@
       <meta name="description" content="software developer resume">
       <meta name="author" content="mike juniper">
 
+      <!-- build:css({.tmp,app}) styles/vendor.css -->
       <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-      <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" >
+      <!-- endbuild -->
 
       <style type="text/css">
         body {
@@ -22,6 +23,10 @@
         .hero-unit {
           padding: 30px;
           margin-bottom: 15px;
+        }
+
+        dd {
+          padding-left: 10px;
         }
 
         @media print {
@@ -39,15 +44,14 @@
           }
 
           #print-email {
-            float: right;
-            margin-top: 10px;
+            font-weight: bold;
           }
 
-          .hero-unit {
+          .jumbotron {
             border: solid 1px #eee !important;
           }
 
-          .span4 {
+          .col-sm-4 {
             width: 30% !important;
             float: left !important;
             margin-left: 3% !important;
@@ -75,7 +79,6 @@
       <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="navbar-header">
           <a class="navbar-brand" href="#">Mike Juniper</a>
-          <span id="print-email" class="visible-print">mjuniper@gmail.com</span>
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -137,12 +140,12 @@
       <hr>
 
       <footer class="alert alert-info">
-      <p>I thought it would be clever to create my resume as a <a href="scripts/resume.js" target="_blank">javascript object</a>. Then I started thinking that it would be cool to put some <a href="http://jsfiddle.net/mjuniper/tHrM4/embedded/result/" target="_blank">unit tests</a> on it to validate it. The tests are kind of token but they end up being another way to present the data. Then I started thinking that people might not think it was all that clever and would rather see a nicely formatted resume. So (since I've always said that any web developer who's worth anything should have an HTML resume) I built this page which uses <a href="http://twitter.github.io/bootstrap/index.html" target="_blank">Twitter Bootstrap</a> for the layout and generates the content from the Javascript object using <a href="http://icanhazjs.com/" target="_blank">ICanHaz</a>/<a href="http://mustache.github.io/" target="_blank">Mustache</a> templates. I thought about using Backbone.js for this but that seemed like overkill.</p>
-  <p>Don't worry, there's a print stylesheet so you should be able to print it, or print it to a pdf.</p>
-      See the <a href="http://jsfiddle.net/mjuniper/tHrM4/embedded/result/">tests</a>.
+        <p>I thought it would be clever to create my resume as a <a href="scripts/resume.js" target="_blank">javascript object</a>. Then I started thinking that it would be cool to put some <a href="http://jsfiddle.net/mjuniper/tHrM4/embedded/result/" target="_blank">unit tests</a> on it to validate it. The tests are kind of token but they end up being another way to present the data. Then I started thinking that people might not think it was all that clever and would rather see a nicely formatted resume. So (since I've always said that any web developer who's worth anything should have an HTML resume) I built this page which uses <a href="http://twitter.github.io/bootstrap/index.html" target="_blank">Twitter Bootstrap</a> for the layout and generates the content from the Javascript object using <a href="http://icanhazjs.com/" target="_blank">ICanHaz</a>/<a href="http://mustache.github.io/" target="_blank">Mustache</a> templates. I thought about using Backbone.js for this but that seemed like overkill.</p>
+        <p>Don't worry, there's a print stylesheet so you should be able to print it, or print it to a pdf.</p>
+        See the <a href="http://jsfiddle.net/mjuniper/tHrM4/embedded/result/">tests</a>.
       </footer>
 
-      </div> <!-- /container -->
+    </div> <!-- /container -->
 
     <div id="about" class="modal fade" tabindex="-1">
       <div class="modal-dialog">
@@ -186,6 +189,7 @@
     <script id="descTemplate" type="text/html">
       <h1>{{name}}</h1>
       <p class="lead">{{description}}</p>
+      <div id="print-email" class="visible-print">mjuniper@gmail.com</div>
     </script>
 
     <script id="langsTemplate" type="text/html">
@@ -255,6 +259,5 @@
         $('#presentations').append(ich.presentationsTemplate(resume));
       });
     </script>
-
   </body>
 </html>
