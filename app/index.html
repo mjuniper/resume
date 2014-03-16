@@ -20,6 +20,11 @@
           padding-top: 60px;
           padding-bottom: 40px;
         }
+
+        .navbar-brand {
+          color: white !important;
+        }
+
         .hero-unit {
           padding: 30px;
           margin-bottom: 15px;
@@ -71,28 +76,34 @@
           h2, h3 { page-break-after: avoid; }
         }
       </style>
-<!--       <link href="../wp-content/uploads/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet"> -->
 
       <script src="bower_components/modernizr/modernizr.js"></script>
     </head>
     <body>
-      <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">Mike Juniper</a>
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="#about" data-toggle="modal" data-target="#about">About</a></li>
-            <li><a href="mailto:mike@mikejuniper.com">Contact</a></li>
-          </ul>
-        </div>
+
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Mike Juniper</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="#about" data-toggle="modal" data-target="#about">About</a></li>
+              <li><a href="mailto:mike@mikejuniper.com">Contact</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
       </nav>
+
 
       <div class="container">
 
@@ -140,7 +151,7 @@
       <hr>
 
       <footer class="alert alert-info">
-        <p>I thought it would be clever to create my resume as a <a href="scripts/resume.js" target="_blank">javascript object</a>. Then I started thinking that it would be cool to put some <a href="http://jsfiddle.net/mjuniper/tHrM4/embedded/result/" target="_blank">unit tests</a> on it to validate it. The tests are kind of token but they end up being another way to present the data. Then I started thinking that people might not think it was all that clever and would rather see a nicely formatted resume. So (since I've always said that any web developer who's worth anything should have an HTML resume) I built this page which uses <a href="http://twitter.github.io/bootstrap/index.html" target="_blank">Twitter Bootstrap</a> for the layout and generates the content from the Javascript object using <a href="http://icanhazjs.com/" target="_blank">ICanHaz</a>/<a href="http://mustache.github.io/" target="_blank">Mustache</a> templates. I thought about using Backbone.js for this but that seemed like overkill.</p>
+        <p>I thought it would be clever to create my resume as a <a href="scripts/resume.js" target="_blank">javascript object</a>. Then I started thinking that it would be cool to put some <a href="http://jsfiddle.net/mjuniper/tHrM4/embedded/result/" target="_blank">unit tests</a> on it to validate it. The tests are kind of token but they end up being another way to present the data. Then I started thinking that people might not think it was all that clever and would rather see a nicely formatted resume. So (since I've always said that any web developer who's worth anything should have an HTML resume) I built this page which uses <a href="http://twitter.github.io/bootstrap/index.html" target="_blank">Twitter Bootstrap</a> for the layout and generates the content from the Javascript object using <a href="http://icanhazjs.com/" target="_blank">ICanHaz</a> &amp; <a href="http://mustache.github.io/" target="_blank">Mustache</a> templates. I thought about using Backbone.js for this but that seemed like overkill.</p>
         <p>Don't worry, there's a print stylesheet so you should be able to print it, or print it to a pdf.</p>
         See the <a href="http://jsfiddle.net/mjuniper/tHrM4/embedded/result/">tests</a>.
       </footer>
@@ -155,9 +166,8 @@
             <h3 id="aboutModalLabel">About</h3>
           </div>
           <div class="modal-body">
-            <p>I thought it would be clever to create my resume as a <a href="http://www.mikejuniper.com/wp-content/uploads/resume.js" target="_blank">javascript object</a>. Then I started thinking that it would be cool to put some <a href="http://jsfiddle.net/mjuniper/tHrM4/embedded/result/" target="_blank">unit tests</a> on it to validate it. The tests are kind of token but they end up being another way to present the data. Then I started thinking that people might not think it was all that clever and would rather see a nicely formatted resume. So (since I've always said that any web developer who's worth anything should have an HTML resume) I built this page which uses <a href="http://twitter.github.io/bootstrap/index.html" target="_blank">Twitter Bootstrap</a> for the layout and generates the content from the Javascript object using <a href="http://icanhazjs.com/" target="_blank">ICanHaz</a>/<a href="http://mustache.github.io/" target="_blank">Mustache</a> templates. I thought about using Backbone.js for this but that seemed like overkill.</p>
+            <p>I thought it would be clever to create my resume as a <a href="http://www.mikejuniper.com/wp-content/uploads/resume.js" target="_blank">javascript object</a>. Then I started thinking that it would be cool to put some <a href="http://jsfiddle.net/mjuniper/tHrM4/embedded/result/" target="_blank">unit tests</a> on it to validate it. The tests are kind of token but they end up being another way to present the data. Then I started thinking that people might not think it was all that clever and would rather see a nicely formatted resume. So (since I've always said that any web developer who's worth anything should have an HTML resume) I built this page which uses <a href="http://twitter.github.io/bootstrap/index.html" target="_blank">Twitter Bootstrap</a> for the layout and generates the content from the Javascript object using <a href="http://icanhazjs.com/" target="_blank">ICanHaz</a> &amp; <a href="http://mustache.github.io/" target="_blank">Mustache</a> templates. I thought about using Backbone.js for this but that seemed like overkill.</p>
             <p>Don't worry, there's a print stylesheet so you should be able to print it, or print it to a pdf.</p>
-            <p><small class="muted">Icons courtesy of <a href="http://fortawesome.github.com/Font-Awesome" target="_blank">Font Awesome</a> by Dave Gandy.</small></p>
           </div>
           <div class="modal-footer">
             <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
@@ -168,12 +178,12 @@
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="bower_components/jquery/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/icanhaz/ICanHaz.min.js"></script>
     <script src="bower_components/momentjs/moment.js"></script>
-    <script src="scripts/resume.js"></script>
     <!-- endbower -->
+    <script src="scripts/resume.js"></script>
     <!-- endbuild -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
