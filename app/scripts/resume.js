@@ -43,7 +43,7 @@ var resume = {
 			location: 'Fort Collins, CO',
 			begDate: new Date(2008, 0),
 			endDate: new Date(2013, 8),
-			description: 'I architected, and built fairly complex web applications for state DOTs. I often also served as a technical project manager with frequent client contact. I occasionally supervised junior developers - typically only one. The apps I built usually deal with management or visualization of traffic data or highway construction projects. There was typically a mapping component; sometimes it was central to the app, sometimes not.'
+			description: 'I architected, and built fairly complex web applications for state DOTs. I often also served as a technical project manager with frequent client contact. I occasionally supervised junior developers - typically only one. The apps I built usually dealt with management or visualization of traffic data or highway construction projects. There was typically a mapping component; sometimes it was central to the app, sometimes not.'
 		},
 		{
 			title: 'GIS Software Developer',
