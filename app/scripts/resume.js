@@ -106,6 +106,11 @@ var resume = {
 	],
 	presentations: [
 		{
+			title: 'Working with JavaScript App Frameworks and ArcGIS API for JavaScript (co-presenter)',
+			event: 'Esri Developer Summit',
+			year: 2014
+		},
+		{
 			title: 'Javascript in the Enterprise (with Dave Bouwman)',
 			event: 'Js.Geo13',
 			year: 2013
