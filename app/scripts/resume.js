@@ -35,7 +35,7 @@ var resume = {
 			location: 'Fort Collins, CO',
 			begDate: new Date(2013, 8),
 			endDate: new Date(),
-			description: ''
+			description: 'Currently working on ArcGIS for Open Data.'
 		},
 		{
 			title: 'Senior Software Developer',
