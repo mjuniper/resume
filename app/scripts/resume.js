@@ -30,12 +30,20 @@ var resume = {
 	},
 	experience: [
 		{
+			title: 'Software Engineer',
+			organization: 'Esri Washington DC R&D Center',
+			location: 'Fort Collins, CO',
+			begDate: new Date(2013, 8),
+			endDate: new Date(),
+			description: ''
+		},
+		{
 			title: 'Senior Software Developer',
 			organization: 'DTS Agile',
 			location: 'Fort Collins, CO',
 			begDate: new Date(2008, 0),
-			endDate: new Date(),
-			description: 'I architect, and build fairly complex web applications for state DOTs. I often also serve as a technical project manager with frequent client contact. I occasionally supervise junior developers - typically only one. The apps I build usually deal with management or visualization of traffic data or highway construction projects. There is almost always some mapping component; sometimes it is central to the app, sometimes not.'
+			endDate: new Date(2013, 8),
+			description: 'I architected, and built fairly complex web applications for state DOTs. I often also served as a technical project manager with frequent client contact. I occasionally supervised junior developers - typically only one. The apps I built usually deal with management or visualization of traffic data or highway construction projects. There was typically a mapping component; sometimes it was central to the app, sometimes not.'
 		},
 		{
 			title: 'GIS Software Developer',
