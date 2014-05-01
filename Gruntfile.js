@@ -254,7 +254,8 @@ module.exports = function (grunt) {
                         '*.{ico,png,txt}',
                         '.htaccess',
                         'images/{,*/}*.{webp,gif}',
-                        'fonts/{,*/}*.*'
+                        'fonts/{,*/}*.*',
+                        'data/resume.js'
                     ]
                 }]
             },
